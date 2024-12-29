@@ -56,6 +56,11 @@ const currencyConverter=()=>{
     setFavorites(updatedFavorites);
     localStorage.setItem("favorites", JSON.stringify(updatedFavorites)); // Store updated favorites in localStorage
   };
+  // Swap 'from' and 'to' currencies
+  const swapCurrencies = () => {
+    setFromCurrency(toCurrency);
+    setToCurrency(fromCurrency);
+  };
 
   return (
     <div>currencyConverter</div>
