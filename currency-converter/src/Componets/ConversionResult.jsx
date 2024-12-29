@@ -1,9 +1,16 @@
 import React from 'react'
 
-function ConversionResult() {
+const ConversionResult=({setConvertedAmount,convertedAmount}) =>{
   return (
-    <div>ConversionResult</div>
-  )
+  <>
+  {/* Display the converted amount if it exists */}
+      {convertedAmount && (
+      <div className="mt-4 text-lg font-medium text-right text-indigo-600">
+        Converted Amount: {convertedAmount}
+      </div>
+    )} 
+  </>
+ )
 }
 
 export default ConversionResult

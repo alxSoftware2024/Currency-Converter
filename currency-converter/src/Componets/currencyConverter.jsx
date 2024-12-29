@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'; // Import necessary React ho
 import { MdCompareArrows } from "react-icons/md";// Import the compare icon
 import CurrencySelector from './CurrencySelector'
 import AmountInput from './AmountInput'
+import ConversionResult from './ConversionResult'
 const CurrencyConverter=()=>{
       // Declare state variables
   const [currencies, setCurrencies] = useState([]); // To hold all available currencies
@@ -112,6 +113,12 @@ const CurrencyConverter=()=>{
           Get Exchange Rate
         </button>
       </div>
+      <ConversionResult
+      convertedAmount={convertedAmount}
+      setConvertedAmount={setConvertedAmount}
+      >
+
+      </ConversionResult>
  </div>
   )
 }

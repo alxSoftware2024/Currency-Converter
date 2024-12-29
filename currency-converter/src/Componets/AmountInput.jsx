@@ -4,7 +4,7 @@ const AmountInput=({amount,setAmount})=>{
   return (
       /* Input for amount to be converted */
 <div className='mt-4'>
-        <label htmlFor='amount' className='block text-sm font-medium text-gray-700'>Amount:</label>
+        <label htmlFor='amount' className='block text-sm font-medium  text-indigo-600'>AMOUNT:</label>
         <input 
           type="number" 
           value={amount} 

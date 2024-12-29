@@ -45,8 +45,9 @@ const CurrencySelector =({currencies,
                                 {currency} {/* Display the currency */}
                             </option>
                         );
-                    })}
-                    <hr /> 
+                    })
+                    
+                    }
                     {/* Divider to separate favorites from the rest of the currencies */}
 
                     {/* Rendering non-favorite currencies */}
@@ -61,6 +62,7 @@ const CurrencySelector =({currencies,
                         })}
                 </select>
 
+                <hr /> 
                 {/* Button to add/remove currency to/from favorites */}
                 <button
                     onClick={() => handleFavorite(currency)} // Toggle favorite status when clicked
