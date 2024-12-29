@@ -63,7 +63,11 @@ const currencyConverter=()=>{
   };
 
   return (
-    <div>currencyConverter</div>
+    <div className="max-w-xl mx-auto my-10 p-5 bg-white rounded-lg shadow-inherit">
+    <h2 className='mb-5 text-2xl font-medium text-center text-indigo-600'>
+        CURRENCY CONVERTER
+      </h2>
+ </div>
   )
 }
 
