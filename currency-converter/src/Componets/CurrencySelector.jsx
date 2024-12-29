@@ -46,7 +46,8 @@ const CurrencySelector =({currencies,
                             </option>
                         );
                     })}
-                    <hr /> {/* Divider to separate favorites from the rest of the currencies */}
+                    <hr /> 
+                    {/* Divider to separate favorites from the rest of the currencies */}
 
                     {/* Rendering non-favorite currencies */}
                     {currencies
@@ -73,4 +74,4 @@ const CurrencySelector =({currencies,
     );
 }
 
-export default CurrencyDropdown;
+export default CurrencySelector;
