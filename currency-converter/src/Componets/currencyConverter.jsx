@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'; // Import necessary React hooks
 import { MdCompareArrows } from "react-icons/md";// Import the compare icon
 import CurrencySelector from './CurrencySelector'
+import AmountInput from './AmountInput'
 const CurrencyConverter=()=>{
       // Declare state variables
   const [currencies, setCurrencies] = useState([]); // To hold all available currencies
