@@ -1,6 +1,5 @@
-import React from 'react'
 import React, { useState, useEffect } from 'react'; // Import necessary React hooks
-const currencyConverter=()=>{
+const CurrencyConverter=()=>{
       // Declare state variables
   const [currencies, setCurrencies] = useState([]); // To hold all available currencies
   const [amount, setAmount] = useState(1); // Amount to be converted
@@ -71,4 +70,4 @@ const currencyConverter=()=>{
   )
 }
 
-export default currencyConverter
+export default CurrencyConverter
