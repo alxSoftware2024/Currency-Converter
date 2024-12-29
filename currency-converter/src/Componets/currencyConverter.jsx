@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'; // Import necessary React hooks
+import CurrencySelector from './CurrencySelector'
 const CurrencyConverter=()=>{
       // Declare state variables
   const [currencies, setCurrencies] = useState([]); // To hold all available currencies
@@ -66,6 +67,16 @@ const CurrencyConverter=()=>{
     <h2 className='mb-5 text-2xl font-medium text-center text-indigo-600'>
         CURRENCY CONVERTER
       </h2>
+      {/* Currency selection dropdowns for from and to currencies */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 items-end">
+        <CurrencySelector
+          favorites={favorites}
+          currencies={currencies}
+          title="From:"
+          currency={fromCurrency}
+          setCurrency={setFromCurrency}
+          handleFavorite={handleFavorite}
+        />
  </div>
   )
 }
