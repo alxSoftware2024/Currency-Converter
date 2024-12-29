@@ -11,6 +11,22 @@ const currencyConverter=()=>{
   const [favorites, setFavorites] = useState(
     JSON.parse(localStorage.getItem("favorites")) || ["INR", "EUR"]
   ); // Favorite currencies saved in localStorage, or default to INR, EUR
+ // Fetch list of available currencies from the API
+ const fetchCurrencies = async () => {
+    try {
+      const res = await fetch("https://api.frankfurter.app/currencies");
+      const data = await res.json();
+      setCurrencies(Object.keys(data)); // Store available currencies
+    } catch (error) {
+      console.error("Error Fetching", error); // Error handling
+    }
+  };
+
+  // Fetch the currencies on initial load
+  useEffect(() => {
+    fetchCurrencies();
+  }, []);
+ 
   return (
     <div>currencyConverter</div>
   )
