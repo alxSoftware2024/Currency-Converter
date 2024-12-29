@@ -77,6 +77,7 @@ const CurrencyConverter=()=>{
           setCurrency={setFromCurrency}
           handleFavorite={handleFavorite}
         />
+        </div>
  </div>
   )
 }
