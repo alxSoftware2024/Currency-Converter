@@ -26,7 +26,24 @@ const currencyConverter=()=>{
   useEffect(() => {
     fetchCurrencies();
   }, []);
- 
+ // Function to convert currency
+ const convertCurrency = async () => {
+    if (!amount) return; // If amount is invalid, don't proceed
+    setConverting(true); // Set converting state to true when starting the conversion
+    try {
+      const res = await fetch(
+        `https://api.frankfurter.app/latest?amount=${amount}&from=${fromCurrency}&to=${toCurrency}`
+      );
+      const data = await res.json();
+      // Update converted amount with result from the API
+      setConvertedAmount(data.rates[toCurrency] + " " + toCurrency);
+    } catch (error) {
+      console.error("Error Fetching", error); // Error handling
+    } finally {
+      setConverting(false); // Set converting state to false after conversion
+    }
+  };
+
   return (
     <div>currencyConverter</div>
   )
