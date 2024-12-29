@@ -43,6 +43,19 @@ const currencyConverter=()=>{
       setConverting(false); // Set converting state to false after conversion
     }
   };
+   // Handle favorite currency toggle (add/remove from favorites)
+   const handleFavorite = (currency) => {
+    let updatedFavorites = [...favorites];
+
+    if (favorites.includes(currency)) {
+      updatedFavorites = updatedFavorites.filter((fav) => fav !== currency); // Remove from favorites
+    } else {
+      updatedFavorites.push(currency); // Add to favorites
+    }
+
+    setFavorites(updatedFavorites);
+    localStorage.setItem("favorites", JSON.stringify(updatedFavorites)); // Store updated favorites in localStorage
+  };
 
   return (
     <div>currencyConverter</div>
