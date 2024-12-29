@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'; // Import necessary React hooks
+import { MdCompareArrows } from "react-icons/md";// Import the compare icon
 import CurrencySelector from './CurrencySelector'
 const CurrencyConverter=()=>{
       // Declare state variables
@@ -77,6 +78,15 @@ const CurrencyConverter=()=>{
           setCurrency={setFromCurrency}
           handleFavorite={handleFavorite}
         />
+         {/* Swap currencies button */}
+         <div className="flex justify-center -mb-5 sm:mb-0">
+          <button
+            onClick={swapCurrencies}
+            className="p-2 bg-gray-200 rounded-full cursor-pointer hover:bg-gray-300"
+          >
+            <MdCompareArrows className="text-xl text-gray-700" />
+          </button>
+        </div>
         </div>
  </div>
   )
