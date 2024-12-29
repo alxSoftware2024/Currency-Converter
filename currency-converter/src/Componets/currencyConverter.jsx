@@ -87,6 +87,14 @@ const CurrencyConverter=()=>{
             <MdCompareArrows className="text-xl text-gray-700" />
           </button>
         </div>
+        <CurrencySelector
+          favorites={favorites}
+          currencies={currencies}
+          currency={toCurrency}
+          setCurrency={setToCurrency}
+          title="To:"
+          handleFavorite={handleFavorite}
+        />
         </div>
  </div>
   )
