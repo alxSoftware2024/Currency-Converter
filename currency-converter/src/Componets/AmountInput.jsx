@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AmountInput=()=>{
+const AmountInput=({amount,setAmount})=>{
   return (
       /* Input for amount to be converted */
 <div className='mt-4'>

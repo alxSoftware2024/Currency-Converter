@@ -97,6 +97,11 @@ const CurrencyConverter=()=>{
           handleFavorite={handleFavorite}
         />
         </div>
+        <AmountInput 
+        amount={amount}
+        setAmount={setAmount}>
+
+        </AmountInput>
  </div>
   )
 }
